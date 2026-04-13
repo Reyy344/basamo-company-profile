@@ -1,0 +1,384 @@
+@font-face {
+  font-family: "CherieDEMO";
+  src: url("../font/Cherie_DEMO.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+.nav1 {
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #02332d;
+}
+
+.nav1 .logo {
+  font-family: "CherieDEMO", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #eaac68;
+}
+
+.nav1 .navbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav1 .navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* CONTENT */
+
+.content {
+  display: flex;
+  padding-top: 5rem;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #dfd0bd;
+}
+
+.content .left h2 {
+  letter-spacing: 4px;
+  font-weight: 550;
+  font-family: "CherieDEMO", sans-serif;
+  font-size: 60px;
+}
+
+.content .left p {
+  font-size: 25px;
+}
+
+.content .left button {
+  display: flex;
+  background-color: #02332d;
+  font-size: 20px;
+  margin-top: 10px;
+  border: none;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 10rem;
+}
+
+.content .left button a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  color: white;
+}
+
+.content .left button .link {
+  display: flex;
+  align-content: center;
+}
+
+/* ABOUT BASAMO */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  background-color: #01302a;
+}
+
+.about h2 {
+  font-family: "CherieDEMO";
+  margin-top: 3rem;
+  font-size: 50px;
+  color: #eaac68;
+  font-weight: 300;
+  text-align: center;
+}
+
+.about p {
+  margin-top: 2em;
+  padding-left: 10em;
+  padding-right: 10em;
+  color: white;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.about .button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.about .button-wrapper .button {
+  background-color: red;
+  color: white;
+  padding: 5px 25px;
+  text-decoration: none;
+}
+
+/* DISPLAY BASAMO */
+.displays {
+  position: relative;
+  padding: 90px 40px 110px;
+  background: #dfd0bd;
+  overflow: hidden;
+}
+
+.displays::before,
+.displays::after {
+  content: "";
+  position: absolute;
+  width: 540px;
+  height: 540px;
+  border: 4px solid #9f120c;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.displays::before {
+  top: -340px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.displays::after {
+  bottom: -360px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.displays-cards {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+
+.display-card {
+  width: 268px;
+  background: #01302a;
+  color: #f5efe6;
+  padding: 20px 18px 24px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.display-card-left {
+  border-radius: 24px 0 0 24px;
+}
+
+.display-card-center {
+  border-radius: 0;
+}
+
+.display-card-right {
+  border-radius: 0 24px 24px 0;
+}
+
+.display-image {
+  width: 100%;
+  height: 232px;
+  border: 3px solid #f0e5d8;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.display-card-left .display-image {
+  border-radius: 24px 0 0 0;
+}
+
+.display-card-center .display-image {
+  border-radius: 0;
+}
+
+.display-card-right .display-image {
+  border-radius: 0 24px 0 0;
+}
+
+.display-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.display-card h3 {
+  margin: 0 0 16px;
+  color: #f3eadc;
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.display-card p {
+  margin: 0;
+  color: #f1e7d9;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 300;
+}
+
+@media (max-width: 992px) {
+  .displays-cards {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .displays {
+    padding: 70px 20px 80px;
+  }
+
+  .displays::before,
+  .displays::after {
+    width: 380px;
+    height: 380px;
+  }
+
+  .display-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* PRODUCTS */
+
+.taste-story {
+  background: #003c35;
+  padding: 90px 56px 100px;
+}
+
+.taste-story-header {
+  max-width: 920px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.taste-story-header h2 {
+  margin: 0 0 14px;
+  color: #d8a15b;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.taste-story-header p {
+  max-width: 860px;
+  margin: 0 auto;
+  color: #efe6d6;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 300;
+}
+
+.taste-story-list {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.taste-item {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.taste-item-reverse .taste-item-image {
+  order: 2;
+}
+
+.taste-item-reverse .taste-item-content {
+  order: 1;
+}
+
+.taste-item-image img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.taste-item-content h3 {
+  margin: 0 0 18px;
+  color: #efe3cf;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.taste-item-content p {
+  margin: 0 0 22px;
+  color: #efe6d6;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 300;
+  max-width: 460px;
+}
+
+.taste-btn {
+  display: inline-block;
+  background: #c61d0f;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.taste-btn:hover {
+  background: #a8180d;
+}
+
+@media (max-width: 900px) {
+  .taste-story {
+    padding: 70px 24px 80px;
+  }
+
+  .taste-story-header h2 {
+    font-size: 28px;
+  }
+
+  .taste-story-header p {
+    font-size: 16px;
+  }
+
+  .taste-item,
+  .taste-item-reverse {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .taste-item-reverse .taste-item-image,
+  .taste-item-reverse .taste-item-content {
+    order: unset;
+  }
+
+  .taste-item-image img {
+    height: 220px;
+  }
+}

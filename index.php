@@ -18,23 +18,21 @@ define("APP_TITLE", "Basamo.");
     <?php require_once "./layout/_navbar.php"; ?>
 
     <!-- HOMEPAGE -->
-    <section>
+    <section class="hero-section">
         <div class="content">
             <div class="left">
-                <h2>Please Your Hero Text <br> Heading Here</h2>
-                <p>Please your description here</p>
+                <h1>Enjoy a Symphony of Indonesian Flavors at Every Table.</h1>
+                <p>Where Nusantara heritage meets modern culinary precision.</p>
 
-                <button>
-                    <a href="">
-                        make an pointment
-                    </a> 
-                    <div class="link">
-                        <img src="./src/Link Up.png" alt="">
-                    </div>
-                </button>
+                <a class="hero-cta" href="">
+                    <span>make and a pointment</span>
+                    <span class="link">
+                        <img src="./src/Link Up.png" alt="Arrow icon">
+                    </span>
+                </a>
             </div>
             <div class="right">
-                <img src="./src/Logo dashboard.png" alt="">
+                <img src="./src/Logo dashboard.png" alt="Basamo dining interior and signature dish">
             </div>
         </div>
     </section>
@@ -154,7 +152,7 @@ define("APP_TITLE", "Basamo.");
 
 <!-- TEXT SECTION -->
  <section class="text-section">
-    <div>
+    <div class="text">
         <h3>"Symphony of Feelings in the Warmth of Togetherness."</h3>
     </div>
  </section>

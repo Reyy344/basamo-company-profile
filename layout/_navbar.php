@@ -7,4 +7,10 @@
         <a href="">The Experience</a>
         <a href="">Contact</a>
     </div>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </nav>

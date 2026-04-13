@@ -3,26 +3,38 @@
   src: url("../font/Cherie_DEMO.ttf");
 }
 
+@font-face {
+  font-family: "Melodrame";
+  src: url("../font/Relationship of mélodrame.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
+body {
+  background-color: #dfd0bd;
+  color: #3e2412;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* NAVBAR */
 .nav1 {
   display: flex;
-  position: fixed;
+  position: sticky;
   z-index: 999;
   width: 100%;
   top: 0;
-  flex-direction: row;
   justify-content: space-between;
-  padding: 20px;
+  align-items: center;
+  padding: 20px 54px;
   background-color: #02332d;
 }
 
@@ -36,60 +48,205 @@ html {
 .nav1 .navbar {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 54px;
 }
 
 .nav1 .navbar a {
   color: white;
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menu-toggle {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  border-radius: 999px;
+  background: #f2d9c5;
+}
+
+.menu-toggle span:nth-child(1) {
+  width: 22px;
+}
+
+.menu-toggle span:nth-child(2) {
+  width: 14px;
+  margin-left: 8px;
+}
+
+.menu-toggle span:nth-child(3) {
+  width: 8px;
+  margin-left: 14px;
 }
 
 /* CONTENT */
-
-.content {
-  display: flex;
-  padding-top: 5rem;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+.hero-section {
+  min-height: calc(100vh - 74px);
   background-color: #dfd0bd;
 }
 
-.content .left h2 {
-  letter-spacing: 4px;
-  font-weight: 550;
-  font-family: "CherieDEMO", sans-serif;
-  font-size: 60px;
+.content {
+  display: flex;
+  min-height: calc(100vh - 74px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+  padding: 58px 54px 70px;
+}
+
+.content .left {
+  max-width: 690px;
+}
+
+.content .left h1 {
+  font-family: "Melodrame", "Times New Roman", serif;
+  font-size: clamp(64px, 7vw, 92px);
+  line-height: 0.95;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+  color: #4a2914;
+  max-width: 760px;
 }
 
 .content .left p {
-  font-size: 25px;
-}
-
-.content .left button {
-  display: flex;
-  background-color: #02332d;
+  margin-top: 26px;
   font-size: 20px;
-  margin-top: 10px;
-  border: none;
-  padding: 10px;
-  gap: 10px;
-  border-radius: 10rem;
+  line-height: 1.5;
+  color: #5f4330;
 }
 
-.content .left button a {
+.hero-cta {
+  margin-top: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 9px 10px 9px 18px;
+  border-radius: 999px;
+  background-color: #02332d;
+  color: #f5efe6;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.hero-cta .link {
   display: flex;
   align-items: center;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-weight: lighter;
-  color: white;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #ead6c2;
 }
 
-.content .left button .link {
+.hero-cta .link img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.content .right {
+  flex: 0 0 340px;
   display: flex;
-  align-content: center;
+  justify-content: flex-end;
+}
+
+.content .right img {
+  width: min(100%, 340px);
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  .nav1 {
+    padding: 18px 28px;
+  }
+
+  .nav1 .navbar {
+    gap: 28px;
+  }
+
+  .content {
+    padding: 48px 28px 56px;
+    gap: 24px;
+  }
+
+  .content .left h1 {
+    font-size: clamp(52px, 8vw, 74px);
+  }
+
+  .content .left p {
+    font-size: 18px;
+  }
+
+  .hero-cta {
+    font-size: 18px;
+  }
+
+  .content .right {
+    flex-basis: 290px;
+  }
+}
+
+@media (max-width: 820px) {
+  .nav1 {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .nav1 .navbar {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px 22px;
+  }
+
+  .content {
+    min-height: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 42px 20px 48px;
+  }
+
+  .content .left {
+    max-width: 100%;
+  }
+
+  .content .left h1 {
+    max-width: none;
+    font-size: clamp(42px, 13vw, 64px);
+  }
+
+  .content .left p {
+    font-size: 16px;
+  }
+
+  .hero-cta {
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .content .right {
+    justify-content: center;
+    flex-basis: auto;
+  }
 }
 
 /* ABOUT BASAMO */
@@ -97,13 +254,14 @@ html {
 .about {
   display: flex;
   flex-direction: column;
-  height: 40vh;
+  min-height: 40vh;
   background-color: #01302a;
+  padding: 56px 24px;
+  justify-content: center;
 }
 
 .about h2 {
   font-family: "CherieDEMO";
-  margin-top: 3rem;
   font-size: 50px;
   color: #eaac68;
   font-weight: 300;
@@ -111,26 +269,28 @@ html {
 }
 
 .about p {
-  margin-top: 2em;
-  padding-left: 10em;
-  padding-right: 10em;
+  max-width: 980px;
+  margin: 2em auto 0;
+  padding: 0 24px;
   color: white;
   font-weight: lighter;
+  line-height: 1.75;
   text-align: center;
 }
 
 .about .button-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 24px;
   cursor: pointer;
 }
 
 .about .button-wrapper .button {
   background-color: red;
   color: white;
-  padding: 5px 25px;
+  padding: 10px 25px;
   text-decoration: none;
+  border-radius: 999px;
 }
 
 /* DISPLAY BASAMO */
@@ -139,6 +299,7 @@ html {
   padding: 90px 40px 110px;
   background: #dfd0bd;
   overflow: hidden;
+  /* height: 100vh; */
 }
 
 .displays::before,
@@ -263,7 +424,6 @@ html {
 }
 
 /* PRODUCTS */
-
 .taste-story {
   background: #003c35;
   padding: 90px 56px 100px;
@@ -317,7 +477,7 @@ html {
 
 .taste-item-image img {
   width: 100%;
-  height: 240px;
+  height: 280px;
   object-fit: cover;
   display: block;
 }
@@ -380,5 +540,202 @@ html {
 
   .taste-item-image img {
     height: 220px;
+  }
+
+  .taste-item-content {
+    text-align: center;
+  }
+
+  .taste-item-content p {
+    max-width: none;
+    margin-bottom: 18px;
+  }
+}
+
+/* TEXT SECTION */
+.text-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 40vh;
+  background-color: #dfd0bd;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.text-section .text h3 {
+  font-family: "CherieDEMO";
+  font-size: 50px;
+  color: #01302a;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .about p {
+    padding: 0 12px;
+  }
+
+  .displays-cards {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 44px 20px;
+  }
+
+  .about h2 {
+    font-size: 40px;
+  }
+
+  .about p {
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 0;
+  }
+
+  .displays {
+    padding: 64px 20px 72px;
+  }
+
+  .display-card,
+  .display-card-left,
+  .display-card-center,
+  .display-card-right {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 24px;
+  }
+
+  .display-card-left .display-image,
+  .display-card-center .display-image,
+  .display-card-right .display-image {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .taste-story {
+    padding: 64px 20px 72px;
+  }
+
+  .taste-story-header {
+    margin-bottom: 40px;
+  }
+
+  .taste-story-header h2 {
+    font-size: 24px;
+  }
+
+  .taste-story-header p {
+    font-size: 15px;
+  }
+
+  .taste-story-list {
+    gap: 44px;
+  }
+
+  .taste-item-image img {
+    height: 210px;
+  }
+
+  .text-section {
+    min-height: 30vh;
+    padding: 40px 20px;
+  }
+
+  .text-section .text h3 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 540px) {
+  .nav1 {
+    padding: 16px 18px;
+  }
+
+  .nav1 .logo {
+    font-size: 26px;
+  }
+
+  .nav1 .navbar a {
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 32px 16px 40px;
+    gap: 20px;
+  }
+
+  .content .left h1 {
+    font-size: clamp(34px, 11vw, 48px);
+    line-height: 1.02;
+    letter-spacing: -0.6px;
+  }
+
+  .content .left p {
+    margin-top: 18px;
+    font-size: 15px;
+  }
+
+  .hero-cta {
+    width: 100%;
+    max-width: 260px;
+    margin-top: 28px;
+    padding: 8px 8px 8px 16px;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .hero-cta .link {
+    width: 36px;
+    height: 36px;
+  }
+
+  .content .right img {
+    width: min(100%, 280px);
+  }
+
+  .about h2 {
+    font-size: 34px;
+  }
+
+  .displays::before,
+  .displays::after {
+    width: 300px;
+    height: 300px;
+  }
+
+  .display-card {
+    padding: 16px 14px 20px;
+  }
+
+  .display-image {
+    height: 210px;
+  }
+
+  .display-card h3 {
+    font-size: 16px;
+  }
+
+  .display-card p {
+    font-size: 14px;
+  }
+
+  .taste-story-header h2 {
+    font-size: 22px;
+  }
+
+  .taste-item-content h3 {
+    font-size: 18px;
+  }
+
+  .taste-item-content p {
+    font-size: 14px;
+  }
+
+  .text-section .text h3 {
+    font-size: 28px;
   }
 }

@@ -1,3 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Biar pas teks di-highlight warnanya senada dengan Basamo */
+::selection {
+  background-color: #9f120c;
+  color: #dfd0bd;
+}
+
 @font-face {
   font-family: "CherieDEMO";
   src: url("../font/Cherie_DEMO.ttf");
@@ -28,7 +38,7 @@ img {
 /* NAVBAR */
 .nav1 {
   display: flex;
-  position: sticky;
+  position: fixed;
   z-index: 999;
   width: 100%;
   top: 0;
@@ -95,6 +105,8 @@ img {
 
 /* CONTENT */
 .hero-section {
+  margin: 0; /* top bottom */
+  margin: 0 auto; /* left right */
   min-height: calc(100vh - 74px);
   background-color: #dfd0bd;
 }
@@ -105,7 +117,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 44px;
-  padding: 58px 54px 70px;
+  padding: 58px 100px 70px;
 }
 
 .content .left {
@@ -113,9 +125,9 @@ img {
 }
 
 .content .left h1 {
-  font-family: "Melodrame", "Times New Roman", serif;
-  font-size: clamp(64px, 7vw, 92px);
-  line-height: 0.95;
+  font-family: "CherieDEMO", sans-serif;
+  font-size: 92px;
+  line-height: 1.2;
   letter-spacing: -1.5px;
   font-weight: 400;
   color: #4a2914;
@@ -124,9 +136,10 @@ img {
 
 .content .left p {
   margin-top: 26px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   color: #5f4330;
+  font-family: "Poppins", sans-serif;
 }
 
 .hero-cta {
@@ -161,13 +174,16 @@ img {
 }
 
 .content .right {
-  flex: 0 0 340px;
+  flex: 1;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  overflow: visible;
 }
 
 .content .right img {
-  width: min(100%, 340px);
+  width: 100%;
+  max-width: 500px;
   height: auto;
   display: block;
 }
@@ -264,7 +280,7 @@ img {
   font-family: "CherieDEMO";
   font-size: 50px;
   color: #eaac68;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -276,6 +292,8 @@ img {
   font-weight: lighter;
   line-height: 1.75;
   text-align: center;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
 }
 
 .about .button-wrapper {
@@ -386,8 +404,10 @@ img {
 
 .display-card h3 {
   margin: 0 0 16px;
+  font-family: "CherieDEMO", serif;
+  letter-spacing: 1px;
   color: #f3eadc;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.35;
   font-weight: 400;
 }
@@ -395,9 +415,10 @@ img {
 .display-card p {
   margin: 0;
   color: #f1e7d9;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.45;
   font-weight: 300;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 992px) {
@@ -438,7 +459,8 @@ img {
 .taste-story-header h2 {
   margin: 0 0 14px;
   color: #d8a15b;
-  font-size: 34px;
+  font-family: "CherieDEMO";
+  font-size: 50px;
   line-height: 1.15;
   font-weight: 400;
 }
@@ -450,6 +472,7 @@ img {
   font-size: 18px;
   line-height: 1.45;
   font-weight: 300;
+  font-family: "Poppins", sans-serif;
 }
 
 .taste-story-list {
@@ -484,8 +507,10 @@ img {
 
 .taste-item-content h3 {
   margin: 0 0 18px;
+  font-family: "CherieDEMO", serif;
+  letter-spacing: 1;
   color: #efe3cf;
-  font-size: 20px;
+  font-size: 26px;
   line-height: 1.3;
   font-weight: 400;
 }
@@ -493,10 +518,11 @@ img {
 .taste-item-content p {
   margin: 0 0 22px;
   color: #efe6d6;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.45;
   font-weight: 300;
   max-width: 460px;
+  font-family: "Poppins", sans-serif;
 }
 
 .taste-btn {
@@ -618,8 +644,9 @@ img {
 .rating-shell h2 {
   margin-bottom: 34px;
   text-align: center;
-  font-family: "Melodrame", "Times New Roman", serif;
-  font-size: clamp(46px, 5vw, 72px);
+  font-family: "CherieDEMO", serif;
+  letter-spacing: 1px;
+  font-size: 50px;
   line-height: 1;
   font-weight: 400;
   color: #eaac68;
@@ -661,7 +688,8 @@ img {
 
 .rating-card h3 {
   margin-top: 18px;
-  font-family: "Melodrame", "Times New Roman", serif;
+  font-family: "CherieDEMO", serif;
+  letter-spacing: 1px;
   font-size: 28px;
   line-height: 1.05;
   font-weight: 400;
@@ -669,8 +697,9 @@ img {
 
 .rating-card p {
   margin-top: 14px;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.35;
+  font-family: "Poppins", sans-serif;
 }
 
 .rating-card-side {
@@ -862,9 +891,10 @@ img {
 }
 
 .contact-info h2 {
-  font-family: "Melodrame", "Times New Roman", serif;
+  font-family: "CherieDEMO", serif;
   font-size: 42px;
   line-height: 1.1;
+  letter-spacing: 1px;
   font-weight: 400;
   color: #01302a;
   margin-bottom: 32px;
@@ -886,9 +916,10 @@ img {
 
 .contact-item p {
   color: #3e2412;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact-map {
@@ -939,15 +970,15 @@ img {
   }
 }
 
-/* FOOTER SECTION */
 .main-footer {
+  position: relative;
+  z-index: 10;
   background-color: #00332d; /* Warna hijau gelap khas Basamo */
   color: #ffffff;
   padding: 60px 54px 40px;
   font-family: "Poppins", sans-serif;
 }
 
-/* BARIS ATAS */
 .footer-top {
   display: flex;
   justify-content: space-between;
@@ -979,14 +1010,14 @@ img {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.1); /* Background putih transparan */
-  border-radius: 50%; /* Biar jadi bulat sempurna */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%; 
   text-decoration: none;
   transition: 0.3s;
 }
 
 .footer-socials a:hover {
-  background-color: #c61d0f; /* Berubah jadi merah pas di-hover */
+  background-color: #c61d0f; 
 }
 
 .footer-socials a i {
@@ -1017,6 +1048,7 @@ img {
 
 .footer-logo h2 {
   font-family: "CherieDEMO", serif;
+  letter-spacing: 1px;
   color: #eaac68; /* Warna gold/cream */
   font-size: 32px;
   font-weight: 500;
@@ -1035,4 +1067,101 @@ img {
     flex-direction: column;
     gap: 15px;
   }
+}
+
+/* Definisikan gerakan */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pasang ke elemen Hero */
+.content .left h1 {
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.content .left p {
+  animation: fadeInUp 1.2s ease-out 0.3s forwards; /* Delay 0.3 detik */
+  opacity: 0; /* Mulai dari transparan */
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.content .right img {
+  animation: floating 4s ease-in-out infinite;
+}
+
+section {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 1s ease-out;
+}
+
+section.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.display-card, .rating-card {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.5s ease;
+}
+
+.display-card:hover, .rating-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(1, 48, 42, 0.2);
+}
+
+/* Gerakan Ngambang yang Halus */
+@keyframes floatingText {
+  0% {
+    transform: translateY(0px);
+    text-shadow: 0 5px 15px rgba(1, 48, 42, 0.1);
+  }
+  50% {
+    transform: translateY(-15px); /* Naik sedikit */
+    text-shadow: 0 20px 30px rgba(1, 48, 42, 0.2); /* Bayangan menjauh */
+  }
+  100% {
+    transform: translateY(0px);
+    text-shadow: 0 5px 15px rgba(1, 48, 42, 0.1);
+  }
+}
+
+.text-section .text h3 {
+  font-family: "CherieDEMO", serif;
+  font-size: 50px;
+  color: #01302a;
+  text-align: center;
+  display: inline-block; /* Wajib agar animasi transform jalan */
+  width: 100%;
+  
+  /* Jalankan Animasi */
+  animation: floatingText 4s ease-in-out infinite;
+  
+  /* Tambahan: Biar teks terlihat lebih mewah */
+  letter-spacing: 2px;
+  line-height: 1.4;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+.text-section .text h3 {
+  /* Gabungkan dengan animasi floating */
+  animation: floatingText 4s ease-in-out infinite, 
+  shimmer 3s ease-in-out infinite;
 }

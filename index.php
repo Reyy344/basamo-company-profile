@@ -1,8 +1,8 @@
-
-
 <?php
+require_once 'config.php';
 
-define("APP_TITLE", "Basamo.");
+$is_logged_in = isset($_SESSION['user_id']);
+$username = $_SESSION['username'] ?? 'Guest';
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +17,7 @@ define("APP_TITLE", "Basamo.");
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
     <?php require_once "./layout/_navbar.php"; ?>
 
@@ -24,7 +25,7 @@ define("APP_TITLE", "Basamo.");
     <section class="hero-section">
         <div class="content">
             <div class="left">
-                <h1>Enjoy a Symphony of Indonesian Flavors at Every Table.</h1>
+                <h1>Enjoy &nbsp; &nbsp;a Symphony of Indonesian Flavors &nbsp; &nbsp;at Every Table.</h1>
                 <p>Where Nusantara heritage meets modern culinary precision.</p>
 
                 <a class="hero-cta" href="">
@@ -298,6 +299,17 @@ define("APP_TITLE", "Basamo.");
         // Scroll to the selected card
         cards[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      });
+
+      // Pilih semua section yang ingin diberi efek muncul
+      document.querySelectorAll('section').forEach((el) => observer.observe(el));
     </script>
+    
 </body>
 </html>

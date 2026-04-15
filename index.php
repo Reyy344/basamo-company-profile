@@ -21,15 +21,14 @@ $username = $_SESSION['username'] ?? 'Guest';
 <body>
     <?php require_once "./layout/_navbar.php"; ?>
 
-    <!-- HOMEPAGE -->
     <section class="hero-section">
         <div class="content">
             <div class="left">
-                <h1>Enjoy &nbsp; &nbsp;a Symphony of Indonesian Flavors &nbsp; &nbsp;at Every Table.</h1>
+                <h1>Enjoy &nbsp;&nbsp; a Symphony of Indonesian Flavors &nbsp;&nbsp; at Every Table.</h1>
                 <p>Where Nusantara heritage meets modern culinary precision.</p>
 
-                <a class="hero-cta" href="">
-                    <span>make and a pointment</span>
+                <a class="hero-cta" href="#taste-story">
+                    <span>Check the best food</span>
                     <span class="link">
                         <img src="./src/Link Up.png" alt="Arrow icon">
                     </span>
@@ -41,21 +40,19 @@ $username = $_SESSION['username'] ?? 'Guest';
         </div>
     </section>
 
-    <!-- ABOUT -->
-    <section>
+    <section id="about">
         <div class="about">
             <h2>Basamo.</h2>
             <p> "Basamo stems from a simple yet profound value: that true luxury is found in every moment spent together. Here, we redefine the richness of Indonesian cuisine through precise modern techniques, without forgetting the traditional roots that guide us.
                 Every dish is a celebration of the carefully selected produce and the skilled hands that work behind the scenes. Basamo is more than just a place to dine; it is a space where taste, art, and soul meet at the same table."</p>
 
             <div class="button-wrapper">
-                <a class="button" href="#">Explore Detail</a>
+                <a class="button" href="explore.php">Explore Detail</a>
             </div>
         </div>
     </section>
     
-    <!-- DISPLAY -->
-    <section class="displays">
+    <section class="displays" id="experience">
       <div class="displays-cards">
         <article class="display-card display-card-left">
           <div class="display-image">
@@ -63,7 +60,7 @@ $username = $_SESSION['username'] ?? 'Guest';
           </div>
           <h3>Exclusive Sensory Journey</h3>
           <p>
-            Only available to a few tables each night," or "A dish that
+            Only available to a few tables each night, a dish that
             delights all five senses at once.
           </p>
         </article>
@@ -74,8 +71,8 @@ $username = $_SESSION['username'] ?? 'Guest';
           </div>
           <h3>Reinventing Tradition</h3>
           <p>
-            Heritage recipes deconstructed with modern techniques," or
-            "Discover another side of the local flavors you love.
+            Heritage recipes deconstructed with modern techniques. 
+            Discover another side of the local flavors you love.
           </p>
         </article>
 
@@ -85,15 +82,14 @@ $username = $_SESSION['username'] ?? 'Guest';
           </div>
           <h3>An Unrivaled Atmosphere</h3>
           <p>
-            A space where time seems to stand still," or "One table for a
+            A space where time seems to stand still. One table for a
             million precious stories.
           </p>
         </article>
       </div>
     </section>
 
-    <!-- PRODUCTS -->
-    <section class="taste-story">
+    <section class="taste-story" id="taste-story">
       <div class="taste-story-header">
         <h2>Taste of Togetherness: Curated Narratives</h2>
         <p>
@@ -111,12 +107,10 @@ $username = $_SESSION['username'] ?? 'Guest';
           <div class="taste-item-content">
             <h3>Rendang Deconstructed: The Heritage Legacy</h3>
             <p>
-              More than just taste, it's about memories created around the dinner
-              table. Let's celebrate the heritage of the archipelago in
-              unforgettable harmony. Welcome to the home of taste, welcome to
-              Basamo.
+              Our signature rendang, slow-cooked for 48 hours, served with a modern 
+              coconut foam and cassava crisp for a multi-textured experience.
             </p>
-            <a href="#" class="taste-btn">Explore More</a>
+            <a href="explore.php" class="taste-btn">Explore More</a>
           </div>
         </article>
 
@@ -127,12 +121,10 @@ $username = $_SESSION['username'] ?? 'Guest';
           <div class="taste-item-content">
             <h3>Sate Padang "Gilded Gold"</h3>
             <p>
-              Selected beef tongue grilled over coffee wood embers, served with a
-              thick satay sauce enriched with selected turmeric and secret spices.
-              What sets it apart is the touch of 24-karat edible gold leaf on top,
-              symbolizing true luxury and respect for the guests.
+              Selected beef tongue grilled over coffee wood embers, served with edible 
+              24-karat gold leaf on top, symbolizing true luxury and respect.
             </p>
-            <a href="#" class="taste-btn">Explore More</a>
+            <a href="explore.php" class="taste-btn">Explore More</a>
           </div>
         </article>
 
@@ -143,85 +135,55 @@ $username = $_SESSION['username'] ?? 'Guest';
           <div class="taste-item-content">
             <h3>Kalio Seabass: Maritime Harmony</h3>
             <p>
-              Sustainably caught wild sea bass, grilled to a crispy skin, is
-              drizzled with a light yet rich Kalio sauce made with pure coconut
-              milk and kandis tamarind. The dish is complemented by purple sweet
-              potato tule, providing a modern contrast in texture.
+              Sustainably caught wild sea bass, grilled to a crispy skin, drizzled 
+              with a light yet rich Kalio sauce and kandis tamarind.
             </p>
-            <a href="#" class="taste-btn">Explore More</a>
+            <a href="explore.php" class="taste-btn">Explore More</a>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- TEXT SECTION -->
     <section class="text-section">
         <div class="text">
             <h3>"Symphony of Feelings in the Warmth of Togetherness."</h3>
         </div>
     </section>
 
-      <!-- Rating Customer -->
     <section class="rating-section">
       <div class="rating-shell">
         <h2>Rating Customer</h2>
-
         <div class="rating-cards">
-          <article class="rating-card rating-card-side" onclick="showRating(0)">
+          <article class="rating-card rating-card-side">
             <div class="rating-avatar">
               <img src="./src/image 1.png" alt="Customer Raihan">
             </div>
             <h3>Raihan</h3>
-            <p>
-              "The restaurant's atmosphere is very intimate and serene, truly the
-              definition of luxury in true togetherness."
-            </p>
-            <div class="rating-stars" aria-label="5 out of 5 stars">
-              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-            </div>
+            <p>"The restaurant's atmosphere is very intimate and serene, truly the definition of luxury."</p>
+            <div class="rating-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
           </article>
-
-          <article class="rating-card rating-card-featured" onclick="showRating(1)">
+          <article class="rating-card rating-card-featured">
             <div class="rating-avatar">
               <img src="./src/image 2.png" alt="Customer Nalendra">
             </div>
             <h3>Nalendra</h3>
-            <p>
-              "The presentation of Sate Padang 'Gilded Gold' is not just about
-              taste, but an extraordinary tribute to the richness of Indonesian
-              spices."
-            </p>
-            <div class="rating-stars" aria-label="5 out of 5 stars">
-              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-            </div>
+            <p>"The presentation of Sate Padang 'Gilded Gold' is an extraordinary tribute to Indonesian spices."</p>
+            <div class="rating-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
           </article>
 
-          <article class="rating-card rating-card-side" onclick="showRating(2)">
+          <article class="rating-card rating-card-side">
             <div class="rating-avatar">
               <img src="./src/image 3.png" alt="Customer Aziland">
             </div>
             <h3>Aziland</h3>
-            <p>
-              "The deconstruction technique of Rendang is simply ingenious,
-              successfully bringing traditional flavors to a previously
-              unimaginable level of fine dining."
-            </p>
-            <div class="rating-stars" aria-label="4 out of 5 stars">
-              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span class="muted-star">&#9733;</span>
-            </div>
+            <p>"The deconstruction technique of Rendang is simply ingenious, bringing flavors to a new level."</p>
+            <div class="rating-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span class="muted-star">★</span></div>
           </article>
-        </div>
-
-        <div class="rating-dots" aria-hidden="true">
-          <span class="active" onclick="showRating(0)"></span>
-          <span onclick="showRating(1)"></span>
-          <span onclick="showRating(2)"></span>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="contact-container">
         <div class="contact-info">
           <h2>Get in Touch</h2>
@@ -242,46 +204,41 @@ $username = $_SESSION['username'] ?? 'Guest';
         </div>
         <div class="contact-map">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.218902910655!2d106.8251383147697!3d-6.229608995478369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3f8f8c5c5c1%3A0x1234567890abcdef!2sBasamo%20Restaurant!5e0!3m2!1sen!2sid!4v1640000000000!5m2!1sen!2sid" 
-            width="100%" 
-            height="400" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-          </iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.24131551829!2d106.75914614335938!3d-6.196555199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f436b8c7446d%3A0x498165d204780d6!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1712345678901!5m2!1sid!2sid" 
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </section>
 
     <footer class="main-footer">
-    <div class="footer-top">
-        <nav class="footer-nav">
-            <a href="#">Home</a>
-            <a href="#">Explore</a>
-            <a href="#">The Experience</a>
-            <a href="#">Contact</a>
-        </nav>
-        <div class="footer-socials">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-vimeo-v"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <div class="footer-top">
+            <nav class="footer-nav">
+                <a href="index.php">Home</a>
+                <a href="explore.php">Explore</a>
+                <a href="#experience">The Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-vimeo-v"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
         </div>
-    </div>
 
-    <div class="footer-bottom">
-        <div class="footer-copy">
-            <p>© 2022 ABC. All rights reserved.</p>
+        <div class="footer-bottom">
+            <div class="footer-copy">
+                <p>© 2026 Basamo Fine Dining. All rights reserved.</p>
+            </div>
+            <div class="footer-logo">
+                <h2>Basamo.</h2>
+            </div>
+            <div class="footer-legal">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </div>
         </div>
-        <div class="footer-logo">
-            <h2>Basamo.</h2>
-        </div>
-        <div class="footer-legal">
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy Policy</a>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script>
       function showRating(index) {
@@ -309,7 +266,31 @@ $username = $_SESSION['username'] ?? 'Guest';
 
       // Pilih semua section yang ingin diberi efek muncul
       document.querySelectorAll('section').forEach((el) => observer.observe(el));
+      document.addEventListener('DOMContentLoaded', () => {
+      const profileBtn = document.getElementById('profileBtn');
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      const mobileToggle = document.getElementById('mobileToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      // Toggle Dropdown Profile
+      profileBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dropdownMenu.classList.toggle('active');
+          profileBtn.classList.toggle('active');
+      });
+
+      // Toggle Mobile Menu
+      mobileToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+      });
+
+      // Tutup semuanya jika klik di luar
+      window.addEventListener('click', () => {
+          dropdownMenu.classList.remove('active');
+          profileBtn.classList.remove('active');
+          navLinks.classList.remove('active');
+      });
+  });
     </script>
-    
 </body>
 </html>
